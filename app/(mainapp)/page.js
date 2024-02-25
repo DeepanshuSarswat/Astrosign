@@ -102,7 +102,7 @@ const Home = () => {
         setCanvasWidth(400); // For mobile screens
       } 
       else if (screenWidth < 400) {
-        setCanvasWidth(250); // For mobile screens
+        setCanvasWidth(200); // For mobile screens
       } 
       else {
         setCanvasWidth(800); // For desktop screens
@@ -122,6 +122,7 @@ const Home = () => {
   }, []);
 
   const handleTouchStart = (e) => {
+    e.preventDefault();
     setIsDrawing(true);
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
@@ -131,6 +132,7 @@ const Home = () => {
   };
 
   const handleTouchMove = (e) => {
+    e.preventDefault();
     if (!isDrawing) return;
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
