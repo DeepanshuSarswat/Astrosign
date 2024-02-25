@@ -102,7 +102,7 @@ const Home = () => {
         setCanvasWidth(400); // For mobile screens
       } 
       else if (screenWidth < 400) {
-        setCanvasWidth(300); // For mobile screens
+        setCanvasWidth(250); // For mobile screens
       } 
       else {
         setCanvasWidth(800); // For desktop screens
